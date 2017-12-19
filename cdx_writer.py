@@ -726,7 +726,7 @@ class CDX_Writer(object):
         elif file_prefix:
             self.warc_path = os.path.join(file_prefix, file)
         else:
-            self.warc_path = file
+            self.warc_path = os.path.basename(file)
 
         if exclude_list:
             if not os.path.exists(exclude_list):
